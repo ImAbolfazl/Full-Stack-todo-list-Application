@@ -45,7 +45,7 @@ cd full-stack-todo-list
 ```bash
 cd backend
 npm install
-node --env-file=.env ./sec/server.js
+node --env-file=.env ./src/server.js
 ```
 
 The backend will run on:
@@ -62,6 +62,7 @@ Open another terminal:
 ```bash
 cd frontend
 npm install
+cd todo-app
 npm run dev
 ```
 
@@ -73,16 +74,51 @@ http://localhost:5173
 
 ## API Endpoints
 
-### Get All Todos
+### Register a new user
 
 ```http
-GET /api/todos
+POST /auth/register
+```
+
+Request Body:
+
+```json
+{
+  "username": "Abolfazl",
+  "password": "AbolfazlsPassword"
+}
+
+### Login to an already registered account
+
+```http
+POST /auth/login
+```
+
+Request Body:
+
+```json
+{
+  "username": "Abolfazl",
+  "password": "AbolfazlsPassword"
+}
+
+### Get All Todos
+
+- All the todo request require a JWT token in the header
+
+```json
+{
+  "token": "a-jwt-token-that-is-created-after-login-or-register"
+}
+
+```http
+GET /todo
 ```
 
 ### Add Todo
 
 ```http
-POST /api/todos
+POST /todo
 ```
 
 Request Body:
@@ -97,7 +133,7 @@ Request Body:
 ### Update Todo
 
 ```http
-PUT /api/todos/:id
+PUT /todo/:id
 ```
 
 Request Body:
@@ -111,7 +147,7 @@ Request Body:
 ### Delete Todo
 
 ```http
-DELETE /api/todos/:id
+DELETE /todo/:id
 ```
 
 ## Learning Goals
