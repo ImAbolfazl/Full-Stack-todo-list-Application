@@ -72,7 +72,7 @@ The frontend will run on:
 http://localhost:5173
 ```
 
-## API Endpoints
+## User auth Endpoints
 
 ### Register a new user
 
@@ -87,6 +87,7 @@ Request Body:
   "username": "Abolfazl",
   "password": "AbolfazlsPassword"
 }
+```
 
 ### Login to an already registered account
 
@@ -101,8 +102,10 @@ Request Body:
   "username": "Abolfazl",
   "password": "AbolfazlsPassword"
 }
+```
 
-### Get All Todos
+## Todo Endpoints
+
 
 - All the todo request require a JWT token in the header
 
@@ -110,6 +113,9 @@ Request Body:
 {
   "token": "a-jwt-token-that-is-created-after-login-or-register"
 }
+```
+
+### Get All Todos
 
 ```http
 GET /todo
