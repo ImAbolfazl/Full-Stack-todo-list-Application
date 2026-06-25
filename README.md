@@ -1,67 +1,51 @@
 # Full Stack Todo App
 
-A modern full-stack Todo List application built with **React**, **Node.js**, and **Express**. Users can create, update, delete, and manage their tasks through a clean and responsive interface.
+A full-stack todo list application built with **ReactJS**, **NodeJS**, and **ExpressJS**. users can register and login to their account and manage their todos ( Create, Read, Update, Delete ) with a basic and responsive UI made using **ReactJS**.
 
 ## Features
 
-* Create new tasks
-* Update existing tasks
-* Delete tasks
-* Mark tasks as completed
-* RESTful API architecture
-* Responsive React frontend
-* Express backend server
-* JSON-based data handling
+* User authentication & authorization using JWT
+* Hashed passwords using BCrypt
+* In-Memory SQLite database
+* Create new todos
+* Update existing todos
+* Delete todos
+* Backend server built using ExpressJS
 * Clean and beginner-friendly code structure
 
-## Tech Stack
+## Libraries used
 
 ### Frontend
 
 * React
 * React Router
 * Axios
-* CSS
+* Tailwind
+* React Icons
 
 ### Backend
 
 * Node.js
 * Express.js
+* CORS
+* JsonWebTokens
+* BCrypt
 
-## Project Structure
-
-```text
-todo-app/
-│
-├── client/
-│   ├── src/
-│   ├── public/
-│   └── package.json
-│
-├── server/
-│   ├── routes/
-│   ├── controllers/
-│   ├── package.json
-│   └── index.js
-│
-└── README.md
-```
-
-## Installation
+## Getting started with the project!
 
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/todo-app.git
-cd todo-app
+git clone https://github.com/ImAbolfazl/full-stack-todo-list/
+cd full-stack-todo-list
 ```
 
 ### Backend Setup
 
 ```bash
-cd server
+cd backend
 npm install
-npm start
+node --env-file=.env ./sec/server.js
 ```
 
 The backend will run on:
@@ -69,13 +53,14 @@ The backend will run on:
 ```text
 http://localhost:8080
 ```
+#### You can change the port from the .env file located in the backend folder 
 
 ### Frontend Setup
 
 Open another terminal:
 
 ```bash
-cd client
+cd frontend
 npm install
 npm run dev
 ```
@@ -94,13 +79,7 @@ http://localhost:5173
 GET /api/todos
 ```
 
-### Get Todo By ID
-
-```http
-GET /api/todos/:id
-```
-
-### Create Todo
+### Add Todo
 
 ```http
 POST /api/todos
@@ -110,7 +89,7 @@ Request Body:
 
 ```json
 {
-  "title": "Learn Express",
+  "task": "Learn Express",
   "completed": false
 }
 ```
@@ -125,8 +104,7 @@ Request Body:
 
 ```json
 {
-  "title": "Learn React",
-  "completed": true
+  "task": "Learn React",
 }
 ```
 
@@ -135,24 +113,6 @@ Request Body:
 ```http
 DELETE /api/todos/:id
 ```
-
-## Environment Variables
-
-Create a `.env` file in the server directory:
-
-```env
-PORT=8080
-```
-
-## Future Improvements
-
-* User authentication
-* MongoDB or MySQL integration
-* JWT authorization
-* Task categories
-* Due dates
-* Dark mode
-* Drag-and-drop task organization
 
 ## Learning Goals
 
@@ -165,10 +125,6 @@ This project was built to practice:
 * Express routing
 * Full-stack application structure
 
-## License
-
-This project is licensed under the MIT License.
-
 ## Author
 
-Built by Abolfazl using React, Node.js, and Express.
+Built by Abolfazl!
