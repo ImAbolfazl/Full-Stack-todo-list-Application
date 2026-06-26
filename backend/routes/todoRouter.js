@@ -23,10 +23,10 @@ router.put("/:id", (req, res) => {
     const {task} = req.body
     const {id} = req.params
 
-    const updateTodo = db.prepare("UPDATE todos SET task = ?, completed = ? WHERE id = ?")
-    const todo = updateTodo.run(task, completed, id)
+    const updateTodo = db.prepare("UPDATE todos SET task = ? WHERE id = ?")
+    const todo = updateTodo.run(task, id)
 
-    res.json({completed: 0, id: todo.lastInsertRowid, task: task})
+    res.json({id: todo.lastInsertRowid, task: task})
 })
 
 router.delete("/:id", (req, res) => {

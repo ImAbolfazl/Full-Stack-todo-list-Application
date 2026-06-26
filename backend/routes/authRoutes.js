@@ -2,6 +2,7 @@ import express from "express"
 import jwt from "jsonwebtoken"
 import bcrypt from "bcrypt"
 import db from "../src/db.js"
+import authMiddleware from "../middleware/auth.js"
 
 const router = express.Router()
 
@@ -48,6 +49,10 @@ router.post("/login", async (req, res) => {
     }catch(err){
         res.sendStatus(500)
     }
+})
+
+router.get("/check", authMiddleware, async (req, res) => {
+    res.sendStatus(200)
 })
 
 export default router
