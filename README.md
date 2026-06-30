@@ -71,6 +71,7 @@ The frontend will run on:
 ```text
 http://localhost:5173
 ```
+edit the cors origin in the server.js file if you changed the frontend url.
 
 ## User auth Endpoints
 
