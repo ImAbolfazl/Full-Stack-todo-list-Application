@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { data, Link, useNavigate } from 'react-router'
 import axios from "axios"
 import dontenv from "dotenv"
@@ -10,6 +10,12 @@ const Register = () => {
         password: ""
     })
     const navigation = useNavigate()
+
+    useEffect(() => {
+        if(localStorage.getItem("token")){
+            navigation("/")
+        }
+    }, [])
 
     const registerUser = async () => {
         const {username, password} = data
@@ -41,7 +47,7 @@ const Register = () => {
   return <>
     <div className='flex flex-col items-center justify-around h-[60vh]'>
         <h1 className='text-5xl font-bold'>Login</h1>
-        <div className='bg-[#8E24AA] p-3 md:p-10 rounded-xl max-md:text-xs'>
+        <div className='bg-[#18181b] p-3 md:p-10 rounded-xl max-md:text-xs'>
             <div className='flex gap-4 flex-col'>
                 {error && (<span className='text-red-800 font-bold'>{error}</span>)}
                 <div className='flex flex-col'>

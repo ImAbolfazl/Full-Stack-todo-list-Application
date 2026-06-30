@@ -51,7 +51,7 @@ const TodoCard = ({task, completed, id, onDelete}) => {
     }
 
   return <>
-    <div className='flex gap-4 items-center border-black border p-4 rounded-2xl md:w-[60vh] justify-between'>
+    <div className='flex gap-4 items-center md:w-[60vh] justify-between group bg-zinc-900 border border-zinc-700 hover:border-violet-500 rounded-2xl p-5 hover:-translate-y-1 transition-all duration-300 text-white'>
         <div className='flex-1 flex justify-start items-center'>
             <input className={`flex-1 outline-none p-3 pb-0 text-xl ${toggleEdit && "border-b border-black"}`} type="text" value={currentTask} onChange={(e) => setCurrentTask(e.target.value)} readOnly={!toggleEdit}/>
         </div>

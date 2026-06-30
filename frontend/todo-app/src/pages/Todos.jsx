@@ -87,15 +87,15 @@ const handleDelete = (id) => {
 
   return <>
   {token == null ? (
-    <Link to={"/login"} className='absolute top-4 left-4 bg-[#9E9E9E] p-2 rounded-xs font-bold'>Login | Register</Link>
+    <Link to={"/login"} className='absolute top-4 left-4 bg-zinc-900 p-2 rounded-xl font-bold border-white border'>Login | Register</Link>
   ) : (
-    <Link onClick={logout} className='absolute top-4 left-4 bg-[#9E9E9E] p-2 rounded-xs font-bold'>Log out</Link>
+    <Link onClick={logout} className='absolute top-4 left-4 bg-zinc-900 p-2 rounded-xl font-bold border-white border'>Log out</Link>
   )}
     <div className='flex items-center justify-between flex-col pt-20 md:pt-2 gap-20'>
         <div className='flex flex-col gap-15 items-center'>
             <h1 className='font-bold text-3xl md:text-5xl'>Todo Application!</h1>
             <div className='flex items-center gap-6'>
-                <input className='outline-none border-b border-black px-3 py-1 md:text-2xl md:w-160' type="text" placeholder='Enter your new todo' ref={todoRef}/>
+                <input className='outline-none border-b border-white px-3 py-1 md:text-2xl md:w-160' type="text" placeholder='Enter your new todo' ref={todoRef}/>
                 <span className='font-bold cursor-pointer md:text-2xl' onClick={addTodo}>Add</span>
             </div>
         </div>
