@@ -23,8 +23,8 @@ router.put("/:id", (req, res) => {
     const {task} = req.body
     const {id} = req.params
 
-    const updateTodo = db.prepare("UPDATE todos SET task = ? WHERE id = ?")
-    const todo = updateTodo.run(task, id)
+    const updateTodo = db.prepare("UPDATE todos SET task = ? WHERE id = ? AND userId = ?")
+    const todo = updateTodo.run(task, id, req.userId)
 
     res.json({id: todo.lastInsertRowid, task: task})
 })
@@ -32,8 +32,8 @@ router.put("/:id", (req, res) => {
 router.delete("/:id", (req, res) => {
     const {id} = req.params
 
-    const deleteTodo = db.prepare("DELETE FROM todos WHERE id = ?")
-    deleteTodo.run(id)
+    const deleteTodo = db.prepare("DELETE FROM todos WHERE id = ? AND user_id = ?")
+    const result = deleteTodo.run(id, req.userId)
 
     res.status(200)
 })
