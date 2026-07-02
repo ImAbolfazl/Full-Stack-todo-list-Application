@@ -61,8 +61,8 @@ Open another terminal:
 
 ```bash
 cd frontend
-npm install
 cd todo-app
+npm install
 npm run dev
 ```
 
