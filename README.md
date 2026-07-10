@@ -1,4 +1,4 @@
-![Preview Image](https://github.com/ImAbolfazl/Full-Stack-todo-list-Application/blob/master/frontend/todo-app/public/previewImage)
+[![Preview Image](https://github.com/ImAbolfazl/Full-Stack-todo-list-Application/blob/master/frontend/todo-app/public/previewImage)]
 
 # Full Stack Todo App
 
