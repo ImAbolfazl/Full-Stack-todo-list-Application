@@ -1,4 +1,4 @@
-<img width="1919" height="961" alt="image" src="https://github.com/user-attachments/assets/fc32242c-a19d-4695-a2ac-68c7b2abd9cb" />
+<img width="1919" height="961" alt="preview image" src="https://github.com/user-attachments/assets/fc32242c-a19d-4695-a2ac-68c7b2abd9cb" />
 
 
 # Full Stack Todo App
