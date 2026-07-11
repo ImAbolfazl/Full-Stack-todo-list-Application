@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ![Preview Image](image-1.png)
+=======
+<img width="1919" height="961" alt="preview image" src="https://github.com/user-attachments/assets/fc32242c-a19d-4695-a2ac-68c7b2abd9cb" />
+
+>>>>>>> f4e56bfc296e869fd2e59494169b99a2fc722005
 
 # Full Stack Todo App
 
