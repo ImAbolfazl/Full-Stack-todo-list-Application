@@ -1,3 +1,5 @@
+![Preview Image](image-1.png)
+
 # Full Stack Todo App
 
 A full-stack todo list application built with **ReactJS**, **NodeJS**, and **ExpressJS**. users can register and login to their account and manage their todos ( Create, Read, Update, Delete ) with a basic and responsive UI made using **ReactJS**.
