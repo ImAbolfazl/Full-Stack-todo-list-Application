@@ -62,7 +62,7 @@ http://localhost:8080
 Open another terminal:
 
 ```bash
-cd frontend
+cd frontend/todo-app
 npm install
 cd todo-app
 npm run dev
